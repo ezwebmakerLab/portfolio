@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BASCKETBALL</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav class="nav" aria-label="주요 탐색">
+      <a href="#" class="nav-logo" aria-label="BASKETBALL 홈으로 이동">BASCKET <span aria-hidden="true">BALL</span></a>
+      <ul class="nav-links" role="list">
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#features">Featured</a></li>
+        <li><a href="#limited">Limited Drop</a></li>
+      </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" aria-label="메인 히어로 배너">
+      <div class="hero-bg" aria-hidden="true">
+        <picture>
+          <source media="(max-width: 900px)" srcset="img/hero_m.jpg" />
+          <source media="(min-width: 901px)" srcset="img/hero.jpg" />
+          <img src="img/hero.jpg" alt="" />
+        </picture>
+      </div>
+      <div class="hero-tag" aria-hidden="true">New Season 2025</div>
+      <div class="hero-content fade-in">
+        <h1 class="hero-title">
+          GAME ON.<br />
+          PLAY <em>HARDER.</em>
+        </h1>
+        <p class="hero-desc">
+          코트 위에서 빛나는 플레이어를 위한 선택.<br />
+          훕시티가 엄선한 농구화, 의류, 용품을 만나보세요.
+        </p>
+        <div class="hero-ctas">
+          <a href="#" class="btn-primary">신상품 보기</a>
+          <a href="#" class="btn-ghost">세일 아이템 <span aria-hidden="true">→</span><span class="sr-only">바로가기</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORY -->
+    <section id="categories" class="category-section" aria-labelledby="cat-heading">
+      <div class="fade-in">
+        <p class="section-label" aria-hidden="true">Categories</p>
+        <h2 id="cat-heading" class="section-title">원하는 카테고리를 찾아보세요</h2>
+      </div>
+      <ul class="category-grid" role="list">
+        <li class="cat-card fade-in">
+          <a href="#" aria-label="SHOES — 농구화 384개 보기">
+            <div class="cat-bg" aria-hidden="true"><img src="img/shoes1.jpg" alt="" /></div>
+            <span class="cat-icon" aria-hidden="true">👟</span>
+            <span class="cat-arrow" aria-hidden="true">↗</span>
+            <div class="cat-info">
+              <div class="cat-name">SHOES</div>
+              <div class="cat-count">농구화 384개</div>
+            </div>
+          </a>
+        </li>
+        <li class="cat-card fade-in">
+          <a href="#" aria-label="UNIFORM — 유니폼·의류 512개 보기">
+            <div class="cat-bg" aria-hidden="true"><img src="img/uniform.jpg" alt="" /></div>
+            <span class="cat-icon" aria-hidden="true">👕</span>
+            <span class="cat-arrow" aria-hidden="true">↗</span>
+            <div class="cat-info">
+              <div class="cat-name">UNIFORM</div>
+              <div class="cat-count">유니폼·의류 512개</div>
+            </div>
+          </a>
+        </li>
+        <li class="cat-card fade-in">
+          <a href="#" aria-label="BALL &amp; GEAR — 공·용품 190개 보기">
+            <div class="cat-bg" aria-hidden="true"><img src="img/ball.jpg" alt="" /></div>
+            <span class="cat-icon" aria-hidden="true">🏀</span>
+            <span class="cat-arrow" aria-hidden="true">↗</span>
+            <div class="cat-info">
+              <div class="cat-name">BALL &amp; GEAR</div>
+              <div class="cat-count">공·용품 190개</div>
+            </div>
+          </a>
+        </li>
+        <li class="cat-card fade-in">
+          <a href="#" aria-label="ACCESSORIES — 액세서리 276개 보기">
+            <div class="cat-bg" aria-hidden="true"><img src="img/shoes2.jpg" alt="" /></div>
+            <span class="cat-icon" aria-hidden="true">🧢</span>
+            <span class="cat-arrow" aria-hidden="true">↗</span>
+            <div class="cat-info">
+              <div class="cat-name">ACCESSORIES</div>
+              <div class="cat-count">액세서리 276개</div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- FEATURED PRODUCTS -->
+    <section id="features" aria-labelledby="featured-heading">
+      <div class="products-header fade-in">
+        <div>
+          <p class="section-label" aria-hidden="true">Featured</p>
+          <h2 id="featured-heading" class="section-title">이번 주 추천 아이템</h2>
+        </div>
+        <a href="#" class="btn-ghost" style="font-size:12px;"
+          >전체보기 <span aria-hidden="true">→</span><span class="sr-only">, 추천 아이템 전체 목록</span></a
+        >
+      </div>
+      <ul class="products-grid" role="list">
+        <li class="product-card fade-in">
+          <a href="#" aria-label="Nike Air Zoom GT Cut 3 EP — 신상품, 189,000원 (정가 229,000원)">
+            <div class="product-thumb">
+              <div class="product-thumb-inner"><img src="img/shoes3.jpg" alt="" /></div>
+              <span class="product-badge" aria-hidden="true">New</span>
+            </div>
+          </a>
+          <div class="product-brand" aria-hidden="true">Nike</div>
+          <div class="product-name" aria-hidden="true">Air Zoom GT Cut 3 EP</div>
+          <div class="product-price-row" aria-hidden="true">
+            <span class="price-sale">189,000원</span>
+            <span class="price-original">229,000원</span>
+          </div>
+        </li>
+        <li class="product-card fade-in">
+          <a href="#" aria-label="Jordan Luka 3 PF — 인기상품, 169,000원">
+            <div class="product-thumb" style="background:#1a1a2e;">
+              <div class="product-thumb-inner"><img src="img/shoes4.jpg" alt="" /></div>
+              <span class="product-badge" style="background:#fff;color:#000;" aria-hidden="true">Hot</span>
+            </div>
+          </a>
+          <div class="product-brand" aria-hidden="true">Jordan</div>
+          <div class="product-name" aria-hidden="true">Luka 3 PF</div>
+          <div class="product-price-row" aria-hidden="true">
+            <span class="price-sale">169,000원</span>
+          </div>
+        </li>
+        <li class="product-card fade-in">
+          <a href="#" aria-label="Spalding TF-1000 Legacy Indoor Ball — 세일, 98,000원 (정가 130,000원)">
+            <div class="product-thumb" style="background:#0d1a0d;">
+              <div class="product-thumb-inner"><img src="img/shoes2.jpg" alt="" /></div>
+              <span class="product-badge" aria-hidden="true">Sale</span>
+            </div>
+          </a>
+          <div class="product-brand" aria-hidden="true">Spalding</div>
+          <div class="product-name" aria-hidden="true">TF-1000 Legacy Indoor Ball</div>
+          <div class="product-price-row" aria-hidden="true">
+            <span class="price-sale">98,000원</span>
+            <span class="price-original">130,000원</span>
+          </div>
+        </li>
+        <li class="product-card fade-in">
+          <a href="#" aria-label="Adidas Harden Vol.8 Signature Jersey — 79,000원 (정가 99,000원)">
+            <div class="product-thumb" style="background:#1a0a00;">
+              <div class="product-thumb-inner"><img src="img/shoes1.jpg" alt="" /></div>
+            </div>
+          </a>
+          <div class="product-brand" aria-hidden="true">Adidas</div>
+          <div class="product-name" aria-hidden="true">Harden Vol.8 Signature Jersey</div>
+          <div class="product-price-row" aria-hidden="true">
+            <span class="price-sale">79,000원</span>
+            <span class="price-original">99,000원</span>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- MID BANNER -->
+    <section id="limited" class="banner-section" aria-labelledby="banner-heading">
+      <div class="banner-bg" aria-hidden="true"></div>
+      <div class="banner-lines" aria-hidden="true">
+        <picture>
+          <source media="(max-width: 900px)" srcset="img/01.jpg" />
+          <source media="(min-width: 901px)" srcset="img/02.jpg" />
+          <img src="img/01.jpg" alt="" />
+        </picture>
+      </div>
+      <div class="banner-content">
+        <p class="banner-eyebrow" aria-hidden="true">Limited Drop</p>
+        <h2 id="banner-heading" class="banner-title">SEASON<br />CLEARANCE<br /><span style="color:var(--orange);">UP TO 50%</span></h2>
+        <a href="#" class="btn-primary">세일 바로가기</a>
+      </div>
+    </section>
+
+    <!-- BRANDS -->
+    <section class="brands-section fade-in" aria-labelledby="brands-heading">
+      <p id="brands-heading" class="brands-title">공식 취급 브랜드</p>
+      <ul class="brands-row" role="list">
+        <li class="brand-item">NIKE</li>
+        <li class="brand-item">JORDAN</li>
+        <li class="brand-item">ADIDAS</li>
+        <li class="brand-item">UNDER ARMOUR</li>
+        <li class="brand-item">PEAK</li>
+        <li class="brand-item">PUMA</li>
+        <li class="brand-item">ANTA</li>
+        <li class="brand-item">NEW BALANCE</li>
+      </ul>
+    </section>
+
+    <!-- FOOTER -->
+    <footer aria-label="사이트 정보">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand" aria-label="BASKETBALL">BASCKET<span aria-hidden="true">BALL</span></div>
+          <p class="footer-desc">농구를 사랑하는 모든 플레이어를 위한 공간입니다.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 BASCKETBALL. All rights reserved.</span>
+        <nav aria-label="법적 고지 링크">
+          <a href="#">개인정보처리방침</a>
+          <span aria-hidden="true"> · </span>
+          <a href="#">이용약관</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script>
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(el => {
+          if (el.isIntersecting) {
+            el.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+      window.addEventListener('scroll', () => {
+        const nav = document.querySelector('nav');
+        nav.style.background = window.scrollY > 60
+          ? 'rgba(10,10,10,0.97)'
+          : 'rgba(10,10,10,0.85)';
+      });
+    </script>
+  </body>
+</html>
