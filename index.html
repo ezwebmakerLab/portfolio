@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no, viewport-fit=cover" />
+    <title>INDEX</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        color: #000;
+        font-family: 'Droid Sans','Malgun Gothic','Apple-Gothic','애플고딕','Tahoma',dotum,'돋움',gulim,'굴림',sans-serif;
+        font-size: 12px;
+        font-weight: normal;
+        letter-spacing: -1px;
+        -webkit-text-size-adjust: none;
+      }
+      div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,select,textarea,p,blockquote,th,td,legend {
+        margin: 0;
+        padding: 0;
+      }
+      legend,caption {
+        display: none;
+      }
+      img,fieldset {
+        border: 0 none;
+      }
+      ul,ol,li {
+        list-style: none outside;
+      }
+      a {
+        display: inline-block;
+        text-decoration: none;
+        color: #3b3b3b;
+      }
+      a:link,a:hover,a:active {
+        text-decoration: none;
+      }
+      /* li,p,dt,dd,div,span {
+        word-break: break-all;
+      } */
+      header {
+        display: block;
+      }
+      .main-h1 {
+        padding: 10px;
+        color: #fff;
+        font-size: 15px;
+        font-weight: normal;
+        line-height: 2em;
+        text-align: center;
+        letter-spacing: 0;
+        font-family: 'Tahoma';
+        background: #000;
+        letter-spacing: 1px;
+      }
+      .codinglist {
+        border-bottom: 1px solid #ccc;
+      }
+      .codinglist li {
+        overflow: hidden;
+        width: 100%;
+        border-top: 1px solid #ccc;
+        font-size: 14px;
+        line-height: 1.8;
+        letter-spacing: 1px;
+      }
+      .codinglist li a{
+        display: block;
+        position: relative;
+        padding: 10px 16px 10px 16px;
+        color: #555;
+      }
+      .codinglist li a[href^='#'] {
+        padding-left:32px;
+        /* font-weight:bold; */
+        color:#555
+      }
+      .codinglist li a[href^='#']:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        width: 0;
+        height: 0;
+        margin-top: -5px;
+        margin-left: -16px;
+        border-top: 8px solid #aaa;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        -webkit-transition: .2s;
+        transition: .2s;
+      }
+      .codinglist .selected[href^='#']:before {
+        border-top-color: #333;
+        transform: scaleY(-1);
+      }
+      .codinglist > li > a.selected {
+        color: #000;
+      }
+      .codinglist > li > a.selected[href^='#']:before {
+        border-top-color: #000;
+      }
+      .codinglist li li a {
+        padding-left: 32px;
+        font-size: 13px;
+      }
+      .codinglist ul {
+        display: none;
+        background: #F4F4F4
+      }
+
+      .tip {
+        padding: 10px 16px;
+        background:#eee;
+        font-size: 12px;
+        color: #111;
+        letter-spacing: 0;
+      }
+
+      .tip.bg-white {
+        background: #fff;
+      }
+
+      section {
+        margin-bottom: 10px;
+        padding: 20px 16px;
+        background: #fff;
+      }
+
+      .component-title {
+        padding: 20px 10px 10px;
+        font-size: 24px;
+        color: #000;
+      }
+      .component-title:before {
+        display: block;
+        width: 40px;
+        height: 4px;
+        margin-bottom: 10px;
+        background: #f43142;
+        content: "";
+      }
+      .component-type {
+        margin: 0 10px;
+        padding: 20px 0 10px;
+        font-size: 18px;
+        color: #000;
+        letter-spacing: 0;
+      }
+      .component-type span {
+        display: block
+      }
+      .component-type + .info {
+        margin-bottom: 0
+      }
+      .title {
+        padding: 20px 0 10px;
+        font-family: Monospace;
+        font-size: 14px;
+        font-weight: normal;
+        color: #999;
+      }
+      .title span {
+        color: #111;
+        letter-spacing: 0;
+      }
+      hr {
+        height: 1px;
+        border: 0;
+        background: #d1d1d6;
+        margin: 40px 0 20px;
+      }
+      hr + .title {
+        padding-top: 0;
+      }
+      .info {
+        margin: 20px 10px;
+        padding: 7px 12px;
+        border: 1px solid #89c2f1;
+        background: #f1f8fe;
+        font-size: 15px;
+        color: #0b83e6;
+        letter-spacing: .5px;
+      }
+      .info li {
+        display: inline-block;
+        width: 48%;
+        margin-bottom: 7px;
+      }
+      .info a:after {
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        margin-left: 2px;
+        border: 1px solid #999;
+        border-width: 1px 1px 0 0;
+        vertical-align: middle;
+        transform: rotate(45deg);
+        content: "";
+      }
+
+            a em {
+              font-style: normal;
+              font-size: 12px;
+              color: #888;
+            }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1 class="main-h1">페이지</h1>
+    </header>
+
+    <section>
+      <ul class="codinglist">
+        <!-- <li>
+          <a href="_layout.html">Layout <em>레이아웃</em></a>
+        </li> -->
+        <li>
+          <a href="#none" class="selected">포트폴리오</a>
+          <ul style="display: block">
+            <li>
+              <a href="portfolio/bascketball/index.html">Bascketball</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      var toggleList = (function () {
+        var depth = $('.codinglist a');
+
+        depth.each(function () {
+          var self = $(this);
+
+          self.on('click', function (e) {
+            if (self.hasClass('selected') !== true) {
+              listOpen(self);
+            } else {
+              listClose(self);
+            }
+          });
+        });
+
+        var listOpen = function (item) {
+          var content = item.next();
+
+          item.addClass('selected');
+          content.slideDown(300);
+          content.find('li').removeAttr('style');
+        };
+        var listClose = function (item) {
+          var content = item.next();
+
+          item.removeClass('selected');
+          content.slideUp(300);
+          content.find('ul').hide();
+          content.find('ul').prev().removeClass('selected');
+        };
+      })();
+    </script>
+  </body>
+</html>
