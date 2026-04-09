@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+// Safe Area
+$safe-area-top: env(safe-area-inset-top);
+$safe-area-bottom: env(safe-area-inset-bottom);
+$safe-area-left: env(safe-area-inset-left);
+$safe-area-right: env(safe-area-inset-right);
+
+// Font - Family
+$font-family: 'Nort', 'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', 'BaseLine', Tahoma, Dotum, sans-serif;
+
+// Font - Letter-Spacing
+$body-spacing: 0.01em;
+$num-spacing: -0.5px;
+$eng-spacing: 0.5px;
+
+// Font - Size
+$font-size-headline1: 27px;
+$font-size-headline2: 24px;
+$font-size-headline-link: 13px;
+$font-size-title1: 18px;
+$font-size-title2: 15px;
+$font-size-body1: 15px;
+$font-size-body2: 13px;
+$font-size-caption: 11px;
+$font-size-paging: 13px;
+
+// Color - Sementic
+$color-white: #fff;
+$color-black: #000;
+$color-red: #dd1d19;
+$color-ivory: #fff4c6;
+$color-navy: #2e54bb;
+$color-item-bg: #f4f4f4;
+
+// Color - Grayscale
+$color-gray-01: #f4f4f4;
+$color-gray-02: #e4e4e4;
+$color-gray-03: #dcdcdc;
+$color-gray-04: #959595;
+$color-gray-05: #757575;
+$color-gray-06: #555;
+$color-gray-07: #333;
+$color-gray-08: #20262c;
+
+$BASE_PATH: '/hoopcity';
+$path: '#{$BASE_PATH}/img/';
+// $path: '/img/';
