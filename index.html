@@ -1,289 +1,455 @@
 <!doctype html>
 <html lang="ko">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no, viewport-fit=cover" />
-    <title>INDEX</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Publisher Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+      :root {
+        --bg:      #0c0c0c;
+        --bg2:     #141414;
+        --bg3:     #222220;
+        --line:    rgba(255,255,255,0.10);
+        --line2:   rgba(255,255,255,0.18);
+        --fg:      #f0ede8;
+        --fg2:     #c2bdb6;   /* 3.8→7.2:1 — body text 충분 */
+        --fg3:     #888480;   /* 2.5→4.6:1 — AA 통과 */
+        --accent:  #e8e0d0;
+        --orange:  #d4622a;
+        --orange2: #f07340;
+        --mono:    'DM Mono', monospace;
+        --sans:    'Noto Sans KR', sans-serif;
+        --display: 'Bebas Neue', sans-serif;
+      }
+
+      html { scroll-behavior: smooth; font-size: 16px; }
+
       body {
-        margin: 0;
-        padding: 0;
-        color: #000;
-        font-family: 'Droid Sans','Malgun Gothic','Apple-Gothic','애플고딕','Tahoma',dotum,'돋움',gulim,'굴림',sans-serif;
-        font-size: 12px;
-        font-weight: normal;
-        letter-spacing: -1px;
-        -webkit-text-size-adjust: none;
+        background: var(--bg);
+        color: var(--fg);
+        font-family: var(--sans);
+        font-weight: 400;
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
       }
-      div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,select,textarea,p,blockquote,th,td,legend {
-        margin: 0;
-        padding: 0;
-      }
-      legend,caption {
-        display: none;
-      }
-      img,fieldset {
-        border: 0 none;
-      }
-      ul,ol,li {
+
+      ul, ol, li {
         list-style: none outside;
       }
-      a {
-        display: inline-block;
-        text-decoration: none;
-        color: #3b3b3b;
-      }
-      a:link,a:hover,a:active {
-        text-decoration: none;
-      }
-      /* li,p,dt,dd,div,span {
-        word-break: break-all;
-      } */
+
+      /* HEADER */
       header {
-        display: block;
+        padding: 2.5rem 3rem;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--line);
       }
-      .main-h1 {
-        padding: 10px;
-        color: #fff;
-        font-size: 15px;
-        font-weight: normal;
-        line-height: 2em;
-        text-align: center;
-        letter-spacing: 0;
-        font-family: 'Tahoma';
-        background: #000;
-        letter-spacing: 1px;
+
+      .logo {
+        font-family: var(--display);
+        font-size: clamp(1.8rem, 4vw, 2.6rem);
+        letter-spacing: 0.06em;
+        color: var(--fg);
+        line-height: 1;
       }
-      .codinglist {
-        border-bottom: 1px solid #ccc;
+
+      .logo span { color: var(--orange2); }
+
+      .header-meta {
+        text-align: right;
+        font-size: 0.78rem;
+        font-family: var(--mono);
+        color: var(--fg3);
+        line-height: 1.9;
+        letter-spacing: 0.04em;
       }
-      .codinglist li {
-        overflow: hidden;
-        width: 100%;
-        border-top: 1px solid #ccc;
-        font-size: 14px;
-        line-height: 1.8;
-        letter-spacing: 1px;
+
+      /* INTRO */
+      .intro {
+        padding: 5rem 3rem 4rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        border-bottom: 1px solid var(--line);
       }
-      .codinglist li a{
-        display: block;
+
+      .intro-kicker {
+        font-family: var(--mono);
+        font-size: 0.7rem;
+        letter-spacing: 0.14em;
+        color: var(--orange2);
+        text-transform: uppercase;
+        margin-bottom: 1.2rem;
+      }
+
+      .intro-title {
+        font-family: var(--display);
+        font-size: clamp(3rem, 6vw, 5rem);
+        letter-spacing: 0.03em;
+        line-height: 0.96;
+        color: var(--fg);
+      }
+
+      .intro-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 2rem;
+      }
+
+      .intro-desc {
+        font-size: 0.97rem;
+        color: var(--fg2);
+        line-height: 2.0;
+      }
+
+      .intro-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+
+      .tag {
+        font-family: var(--mono);
+        font-size: 0.74rem;
+        letter-spacing: 0.05em;
+        padding: 0.32rem 0.85rem;
+        border: 1px solid var(--line2);
+        color: var(--fg3);
+        border-radius: 2px;
+
+        &:hover {
+          border-color: var(--orange);
+          color: var(--orange2);
+          cursor: default;
+        }
+      }
+
+      /* WORKS */
+      .works-section { padding: 0 3rem 6rem; }
+
+      .works-header {
+        padding: 3rem 0 0;
+        display: flex;
+        align-items: baseline;
+        gap: 1rem;
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 1rem;
+        margin-bottom: 0;
+      }
+
+      .works-label {
+        font-family: var(--mono);
+        font-size: 0.76rem;
+        letter-spacing: 0.10em;
+        color: var(--fg3);
+        text-transform: uppercase;
+      }
+
+      .works-count {
+        font-family: var(--mono);
+        font-size: 0.9rem;
+        color: var(--fg3);
+        margin-left: auto;
+      }
+
+      /* CARD */
+      .work-item {
+        display: grid;
+        grid-template-columns: 80px 1fr auto;
+        gap: 0 2.5rem;
+        align-items: start;
+        padding: 2.4rem 0;
+        border-bottom: 1px solid var(--line);
+        text-decoration: none;
+        color: inherit;
         position: relative;
-        padding: 10px 16px 10px 16px;
-        color: #555;
       }
-      .codinglist li a[href^='#'] {
-        padding-left:32px;
-        /* font-weight:bold; */
-        color:#555
-      }
-      .codinglist li a[href^='#']:before {
+
+      .work-item::before {
         content: '';
         position: absolute;
-        top: 50%;
-        width: 0;
-        height: 0;
-        margin-top: -5px;
-        margin-left: -16px;
-        border-top: 8px solid #aaa;
-        border-left: 4px solid transparent;
-        border-right: 4px solid transparent;
-        -webkit-transition: .2s;
-        transition: .2s;
-      }
-      .codinglist .selected[href^='#']:before {
-        border-top-color: #333;
-        transform: scaleY(-1);
-      }
-      .codinglist > li > a.selected {
-        color: #000;
-      }
-      .codinglist > li > a.selected[href^='#']:before {
-        border-top-color: #000;
-      }
-      .codinglist li li a {
-        padding-left: 32px;
-        font-size: 13px;
-      }
-      .codinglist ul {
-        display: none;
-        background: #F4F4F4
+        inset: 0 -3rem;
+        background: transparent;
+        transition: background 0.2s;
+        pointer-events: none;
       }
 
-      .tip {
-        padding: 10px 16px;
-        background:#eee;
-        font-size: 12px;
-        color: #111;
-        letter-spacing: 0;
-      }
+      .work-item:hover::before         { background: rgba(255,255,255,0.02); }
+      .work-item:hover .work-num       { color: var(--orange2); }
+      .work-item:hover .work-arrow     { opacity: 1; transform: translate(3px, -3px); }
+      .work-item:hover .work-name-link { color: var(--accent); }
 
-      .tip.bg-white {
-        background: #fff;
-      }
-
-      section {
-        margin-bottom: 10px;
-        padding: 20px 16px;
-        background: #fff;
-      }
-
-      .component-title {
-        padding: 20px 10px 10px;
-        font-size: 24px;
-        color: #000;
-      }
-      .component-title:before {
+      .work-name-link {
         display: block;
-        width: 40px;
-        height: 4px;
-        margin-bottom: 10px;
-        background: #f43142;
-        content: "";
-      }
-      .component-type {
-        margin: 0 10px;
-        padding: 20px 0 10px;
-        font-size: 18px;
-        color: #000;
-        letter-spacing: 0;
-      }
-      .component-type span {
-        display: block
-      }
-      .component-type + .info {
-        margin-bottom: 0
-      }
-      .title {
-        padding: 20px 0 10px;
-        font-family: Monospace;
-        font-size: 14px;
-        font-weight: normal;
-        color: #999;
-      }
-      .title span {
-        color: #111;
-        letter-spacing: 0;
-      }
-      hr {
-        height: 1px;
-        border: 0;
-        background: #d1d1d6;
-        margin: 40px 0 20px;
-      }
-      hr + .title {
-        padding-top: 0;
-      }
-      .info {
-        margin: 20px 10px;
-        padding: 7px 12px;
-        border: 1px solid #89c2f1;
-        background: #f1f8fe;
-        font-size: 15px;
-        color: #0b83e6;
-        letter-spacing: .5px;
-      }
-      .info li {
-        display: inline-block;
-        width: 48%;
-        margin-bottom: 7px;
-      }
-      .info a:after {
-        display: inline-block;
-        width: 5px;
-        height: 5px;
-        margin-left: 2px;
-        border: 1px solid #999;
-        border-width: 1px 1px 0 0;
-        vertical-align: middle;
-        transform: rotate(45deg);
-        content: "";
+        text-decoration: none;
+        color: inherit;
+        transition: color 0.2s;
+        outline-offset: 3px;
       }
 
-            a em {
-              font-style: normal;
-              font-size: 12px;
-              color: #888;
-            }
+      .work-name-link::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+      }
+
+      .work-sub { position: relative; z-index: 1; }
+
+      .work-num {
+        font-family: var(--mono);
+        font-size: 0.8rem;
+        color: var(--fg3);
+        padding-top: 0.35rem;
+        transition: color 0.2s;
+      }
+
+      .work-type {
+        font-family: var(--mono);
+        font-size: 0.82rem;
+        letter-spacing: 0.04em;
+        color: var(--fg3);
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+      }
+
+      .work-name {
+        font-family: var(--display);
+        font-size: clamp(1.6rem, 3vw, 2.2rem);
+        letter-spacing: 0.04em;
+        line-height: 1;
+        margin-bottom: 0.9rem;
+        transition: color 0.2s;
+      }
+
+      .work-desc {
+        font-size: 0.9rem;
+        color: var(--fg2);
+        line-height: 1.95;
+        max-width: 620px;
+        margin-bottom: 1rem;
+      }
+
+      .work-desc code {
+        font-family: var(--mono);
+        font-size: 0.9rem;
+        color: var(--fg3);
+      }
+
+      .work-skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+      }
+
+      .skill-tag {
+        font-family: var(--mono);
+        font-size: 0.76rem;
+        letter-spacing: 0.04em;
+        padding: 0.26rem 0.7rem;
+        background: var(--bg3);
+        color: var(--fg3);
+        border-radius: 2px;
+      }
+
+      .skill-tag.hl {
+        background: rgba(212, 98, 42, 0.15);
+        color: var(--orange2);
+      }
+
+      .work-arrow {
+        font-size: 1.4rem;
+        color: var(--fg3);
+        padding-top: 0.25rem;
+        opacity: 0.35;
+        transition: opacity 0.2s, transform 0.2s;
+      }
+
+      /* ARIA 서브링크 */
+      .work-sub {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        margin-top: 0.9rem;
+        font-family: var(--mono);
+        font-size: 0.72rem;
+        letter-spacing: 0.06em;
+        color: var(--orange2);
+        text-decoration: none;
+        border-bottom: 1px solid rgba(240,115,64,0.3);
+        padding-bottom: 1px;
+        transition: border-color 0.15s;
+      }
+
+      .work-sub:hover { border-color: var(--orange2); }
+
+      /* FOOTER */
+      footer {
+        padding: 2.5rem 3rem;
+        border-top: 1px solid var(--line);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .footer-note {
+        font-family: var(--mono);
+        font-size: 0.74rem;
+        color: var(--fg3);
+        letter-spacing: 0.05em;
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 720px) {
+        header { padding: 1.8rem 1.5rem; flex-direction: column; align-items: flex-start; gap: 0.8rem; }
+        .header-meta { text-align: left; }
+        .intro { padding: 3rem 1.5rem 2.5rem; grid-template-columns: 1fr; gap: 2rem; }
+        .works-section { padding: 0 1.5rem 4rem; }
+        .work-item { grid-template-columns: 44px 1fr 1.2rem; gap: 0 1rem; padding: 1.8rem 0; }
+        .work-item::before { inset: 0 -1.5rem; }
+        .work-arrow { font-size: 1rem; }
+        footer { padding: 1.8rem 1.5rem; flex-direction: column; gap: 0.4rem; align-items: flex-start; }
+      }
+
+      /* FADE IN */
+      .reveal {
+        opacity: 0;
+        transform: translateY(14px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+      }
+      .reveal.visible { opacity: 1; transform: none; }
     </style>
   </head>
-
   <body>
-    <header>
-      <h1 class="main-h1">페이지</h1>
+    <header class="reveal">
+      <div class="logo" aria-label="Web Publisher 포트폴리오">WEB <span>PUBLISHER</span></div>
+      <div class="header-meta" aria-hidden="true">
+        HTML / CSS · 반응형 · 웹접근성<br />
+        Figma to Code · 15yr exp.
+      </div>
     </header>
 
-    <section>
-      <ul class="codinglist">
-        <!-- <li>
-          <a href="_layout.html">Layout <em>레이아웃</em></a>
-        </li> -->
-        <li>
-          <a href="#none" class="selected">포트폴리오</a>
-          <ul style="display: block">
-            <li>
-              <a href="portfolio/bascketball/index.html" target="_blank">Bascketball</a>
-            </li>
-            <li>
-              <a href="portfolio/bascketball/index_aria.html" target="_blank">Bascketball - ARIA 적용</a>
-            </li>
-            <li>
-              <a href="portfolio/flowmatrics/index.html" target="_blank">Flow Matrics</a>
-            </li>
-            <li>
-              <a href="portfolio/cafevillage/index.html" target="_blank">Cafe Village</a>
-            </li>
-            <li>
-              <a href="portfolio/simplecafe/index.html" target="_blank">Simple Cafe</a>
-            </li>
-          </ul>
-        </li>
-        <!-- <li>
-          <a href="#none" class="selected">랜딩 템플릿 - 카페 01</a>
-          <ul style="display: block">
-            <li>
-              <a href="_template/index.html" target="_blank">모바일 ONLY</a>
-            </li>
-            <li>
-              <a href="_template/index_rw.html" target="_blank">반응형</a>
-            </li>
-          </ul>
-        </li> -->
-      </ul>
+    <section class="intro" aria-labelledby="intro-heading">
+      <div class="intro-left reveal">
+        <p class="intro-kicker" aria-hidden="true">Portfolio · 2025</p>
+        <h1 id="intro-heading" class="intro-title">WORKS &amp;<br />SAMPLES</h1>
+      </div>
+      <div class="intro-right reveal">
+        <p class="intro-desc">
+          디자인 시안이 실제 브라우저에서 깨지지 않도록,<br />
+          모바일부터 데스크탑까지 일관되게 구현합니다.<br /><br />
+          20년 경력의 HTML/CSS 퍼블리싱 — 반응형, 웹접근성,<br />
+          Figma 협업까지 텍스트·메신저 기반으로 진행합니다.
+        </p>
+        <ul class="intro-tags" role="list" aria-label="보유 기술">
+          <li class="tag">HTML5</li>
+          <li class="tag">CSS3</li>
+          <li class="tag">반응형 웹</li>
+          <li class="tag">웹접근성 WCAG</li>
+          <li class="tag">ARIA</li>
+          <li class="tag">BEM</li>
+          <li class="tag">Figma 협업</li>
+          <li class="tag">크로스브라우저</li>
+        </ul>
+      </div>
     </section>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <section class="works-section" aria-labelledby="works-heading">
+      <div class="works-header">
+        <h2 id="works-heading" class="works-label">Selected Works</h2>
+        <span class="works-count" aria-label="총 3개 프로젝트">03 projects</span>
+      </div>
+
+      <!-- 01 -->
+      <div class="work-item reveal">
+        <div class="work-num" aria-hidden="true">01</div>
+        <div class="work-body">
+          <div class="work-type" aria-hidden="true">E-commerce · 쇼핑몰 랜딩</div>
+          <a class="work-name work-name-link" href="portfolio/bascketball/index.html" aria-label="Basketball 쇼핑몰 랜딩페이지 보기">BASKETBALL</a>
+          <p class="work-desc">
+            농구용품 쇼핑몰 랜딩페이지. 히어로 배너, 카테고리 그리드, 상품 카드, 배너 섹션으로 구성.<br />
+            <code>picture</code> 태그로 모바일·데스크탑 이미지를 분기하고, IntersectionObserver 기반 스크롤 페이드인 적용.
+          </p>
+          <div class="work-skills" aria-label="사용 기술">
+            <span class="skill-tag">반응형</span>
+            <span class="skill-tag">picture 태그</span>
+            <span class="skill-tag">CSS Grid</span>
+            <span class="skill-tag">scroll fade-in</span>
+            <span class="skill-tag hl">ARIA 전/후 비교</span>
+          </div>
+          <a class="work-sub" href="portfolio/bascketball/index_aria.html" aria-label="Basketball ARIA 접근성 적용 버전 별도 보기">
+            ARIA 접근성 적용 버전 →
+          </a>
+        </div>
+        <div class="work-arrow" aria-hidden="true">↗</div>
+      </div>
+
+      <!-- 02 -->
+      <div class="work-item reveal">
+        <div class="work-num" aria-hidden="true">02</div>
+        <div class="work-body">
+          <div class="work-type" aria-hidden="true">SaaS · 영문 랜딩페이지</div>
+          <a class="work-name work-name-link" href="portfolio/flowmatrics/index.html" aria-label="FlowMetrics SaaS 랜딩페이지 보기">FLOWMETRICS</a>
+          <p class="work-desc">
+            분석 대시보드 SaaS 서비스의 영문 랜딩페이지. 기능 소개, 프리뷰 섹션, 혜택 정리, CTA까지 전형적인 SaaS 랜딩 구조를 구현. IT
+            스타트업·에이전시 클라이언트 대응 레퍼런스.
+          </p>
+          <div class="work-skills" aria-label="사용 기술">
+            <span class="skill-tag">영문 마크업</span>
+            <span class="skill-tag">섹션 구조 설계</span>
+            <span class="skill-tag">반응형</span>
+            <span class="skill-tag">SaaS 랜딩 패턴</span>
+          </div>
+        </div>
+        <div class="work-arrow" aria-hidden="true">↗</div>
+      </div>
+
+      <!-- 03 -->
+      <div class="work-item reveal">
+        <div class="work-num" aria-hidden="true">03</div>
+        <div class="work-body">
+          <div class="work-type" aria-hidden="true">F&amp;B · 프랜차이즈 랜딩</div>
+          <a class="work-name work-name-link" href="portfolio/simplecafe/index.html" aria-label="Simple Cafe 프랜차이즈 랜딩페이지 보기"
+            >SIMPLE CAFE</a
+          >
+          <p class="work-desc">
+            커피 프랜차이즈 가맹 안내 랜딩페이지. 메뉴 소개, 창업 혜택, 매장 현황, 문의 폼까지 소상공인 타깃 랜딩에 필요한 요소를 완결 구성. select
+            포함 폼 마크업 구현.
+          </p>
+          <div class="work-skills" aria-label="사용 기술">
+            <span class="skill-tag">폼 마크업</span>
+            <span class="skill-tag">select 구현</span>
+            <span class="skill-tag">반응형</span>
+            <span class="skill-tag">소상공인 타깃</span>
+          </div>
+        </div>
+        <div class="work-arrow" aria-hidden="true">↗</div>
+      </div>
+    </section>
+
+    <footer aria-label="연락처 정보">
+      <span class="footer-note">HTML / CSS · 반응형 · 웹접근성 · Figma 협업</span>
+      <span class="footer-note">문의: 카카오톡 · 이메일 기반 협업</span>
+    </footer>
+
     <script>
-      var toggleList = (function () {
-        var depth = $('.codinglist a');
-
-        depth.each(function () {
-          var self = $(this);
-
-          self.on('click', function (e) {
-            if (self.hasClass('selected') !== true) {
-              listOpen(self);
-            } else {
-              listClose(self);
-            }
-          });
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e, i) => {
+          if (e.isIntersecting) {
+            setTimeout(() => e.target.classList.add('visible'), i * 80);
+            io.unobserve(e.target);
+          }
         });
-
-        var listOpen = function (item) {
-          var content = item.next();
-
-          item.addClass('selected');
-          content.slideDown(300);
-          content.find('li').removeAttr('style');
-        };
-        var listClose = function (item) {
-          var content = item.next();
-
-          item.removeClass('selected');
-          content.slideUp(300);
-          content.find('ul').hide();
-          content.find('ul').prev().removeClass('selected');
-        };
-      })();
+      }, { threshold: 0.08 });
+      document.querySelectorAll('.reveal').forEach(el => io.observe(el));
     </script>
   </body>
 </html>
