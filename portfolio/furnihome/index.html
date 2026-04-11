@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FurniHome — New Collection</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav class="nav" aria-label="주요 탐색">
+      <a href="index.html" class="nav-logo" aria-label="FurniHome 홈">
+        <svg class="nav-logo-icon" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M4 24V12L14 4L24 12V24H18V18H10V24H4Z" fill="#b88e2f" opacity=".9" />
+        </svg>
+        FurniHome
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="nav-icons" aria-label="계정 및 장바구니">
+        <button class="nav-icon-btn" aria-label="내 계정">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="8" r="4" />
+            <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
+          </svg>
+        </button>
+        <button class="nav-icon-btn" aria-label="검색">
+          <svg viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="7" />
+            <path d="M21 21l-4-4" />
+          </svg>
+        </button>
+        <button class="nav-icon-btn" aria-label="위시리스트">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+            />
+          </svg>
+        </button>
+        <button class="nav-icon-btn" aria-label="장바구니">
+          <svg viewBox="0 0 24 24">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <path d="M16 10a4 4 0 0 1-8 0" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" aria-label="신상품 히어로 배너">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <!-- <div class="hero-deco" aria-hidden="true"></div> -->
+      <div class="hero-card reveal">
+        <p class="hero-eyebrow">New Arrival</p>
+        <h1 class="hero-title">가구를 넘어<br />하나의 오브제처럼</h1>
+        <p class="hero-desc">공간의 품격이 완성됩니다</p>
+        <a href="#" class="btn-gold">BUY NOW</a>
+      </div>
+    </section>
+
+    <!-- BROWSE THE RANGE -->
+    <section class="browse reveal" aria-labelledby="browse-heading">
+      <h2 id="browse-heading" class="section-title">Browse The Range</h2>
+      <p class="section-sub">다양한 제품을 살펴보세요</p>
+      <div class="browse-grid" role="list">
+        <div class="browse-card" role="listitem" tabindex="0" aria-label="Dining 카테고리">
+          <div class="browse-card-img" style="background-image: url('img/dining.jpg');" aria-hidden="true"><a href="shop.html"></a></div>
+          <a href="shop.html" class="browse-card-label">다이닝룸</a>
+        </div>
+        <div class="browse-card" role="listitem" tabindex="0" aria-label="Living 카테고리">
+          <div class="browse-card-img" style="background-image: url('img/living.jpg');" aria-hidden="true"><a href="shop.html"></a></div>
+          <a href="shop.html" class="browse-card-label">생활공간</a>
+        </div>
+        <div class="browse-card" role="listitem" tabindex="0" aria-label="Bedroom 카테고리">
+          <div class="browse-card-img" style="background-image: url('img/bedroom.jpg');" aria-hidden="true"><a href="shop.html"></a></div>
+          <a href="shop.html" class="browse-card-label">침실</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR PRODUCTS -->
+    <section class="products" aria-labelledby="products-heading">
+      <div class="products-header reveal">
+        <h2 id="products-heading" class="section-title">Our Products</h2>
+      </div>
+
+      <ul class="products-grid reveal" role="list">
+        <!-- 1 -->
+        <li class="product-card" role="listitem">
+          <div class="product-thumb">
+            <div class="product-thumb-img" style="background-image:url('img/product_01.jpg');" aria-hidden="true"></div>
+            <div class="product-overlay" aria-hidden="true">
+              <button class="btn-add">Add to cart</button>
+              <div class="overlay-actions">
+                <span class="overlay-action">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
+                    <polyline points="16 6 12 2 8 6" />
+                    <line x1="12" y1="2" x2="12" y2="15" />
+                  </svg>
+                  Share
+                </span>
+                <span class="overlay-action">
+                  <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9" /></svg>
+                  Compare
+                </span>
+                <span class="overlay-action">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l7.78 7.78 7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                    />
+                  </svg>
+                  Like
+                </span>
+              </div>
+            </div>
+          </div>
+          <a href="detail.html" class="product-info">
+            <div class="product-name">Syltherine</div>
+            <div class="product-sub">세련된 카페 의자</div>
+            <div class="product-price">
+              <span class="price-main">￦250,000</span>
+              <span class="price-orig">￦350,000</span>
+            </div>
+          </a>
+          <span class="badge badge-sale" aria-label="50% 할인">-50%</span>
+        </li>
+
+        <!-- 2 -->
+        <li class="product-card" role="listitem">
+          <div class="product-thumb">
+            <div class="product-thumb-img" style="background-image:url('img/product_02.jpg');" aria-hidden="true"></div>
+            <div class="product-overlay" aria-hidden="true">
+              <button class="btn-add">Add to cart</button>
+              <div class="overlay-actions">
+                <span class="overlay-action">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
+                    <polyline points="16 6 12 2 8 6" />
+                    <line x1="12" y1="2" x2="12" y2="15" />
+                  </svg>
+                  Share
+                </span>
+                <span class="overlay-action">
+                  <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9" /></svg>
+                  Compare
+                </span>
+                <span class="overlay-action">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l7.78 7.78 7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                    />
+                  </svg>
+                  Like
+                </span>
+              </div>
+            </div>
+          </div>
+          <a href="detail.html" class="product-info">
+            <div class="product-name">Leviosa</div>
+            <div class="product-sub">세련된 카페 의자</div>
+            <div class="product-price">
+              <span class="price-main">￦250,000</span>
+            </div>
+          </a>
+        </li>
+
+        <!-- 3 -->
+        <li class="product-card" role="listitem">
+          <div class="product-thumb">
+            <div class="product-thumb-img" style="background-image:url('img/product_03.jpg');" aria-hidden="true"></div>
+            <div class="product-overlay" aria-hidden="true">
+              <button class="btn-add">Add to cart</button>
+              <div class="overlay-actions">
+                <span class="overlay-action">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
+                    <polyline points="16 6 12 2 8 6" />
+                    <line x1="12" y1="2" x2="12" y2="15" />
+                  </svg>
+                  Share
+                </span>
+                <span class="overlay-action">
+                  <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9" /></svg>
+                  Compare
+                </span>
+                <span class="overlay-action">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l7.78 7.78 7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                    />
+                  </svg>
+                  Like
+                </span>
+              </div>
+            </div>
+          </div>
+          <a href="detail.html" class="product-info">
+            <div class="product-name">Lolito</div>
+            <div class="product-sub">고급 대형 소파</div>
+            <div class="product-price">
+              <span class="price-main">￦700,000</span>
+              <span class="price-orig">￦1,400,000</span>
+            </div>
+          </a>
+          <span class="badge badge-sale" aria-label="50% 할인">-50%</span>
+        </li>
+
+        <!-- 4 -->
+        <li class="product-card" role="listitem">
+          <div class="product-thumb">
+            <div class="product-thumb-img" style="background-image:url('img/product_04.jpg');" aria-hidden="true"></div>
+            <div class="product-overlay" aria-hidden="true">
+              <button class="btn-add">Add to cart</button>
+              <div class="overlay-actions">
+                <span class="overlay-action">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
+                    <polyline points="16 6 12 2 8 6" />
+                    <line x1="12" y1="2" x2="12" y2="15" />
+                  </svg>
+                  Share
+                </span>
+                <span class="overlay-action">
+                  <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9" /></svg>
+                  Compare
+                </span>
+                <span class="overlay-action">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l7.78 7.78 7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                    />
+                  </svg>
+                  Like
+                </span>
+              </div>
+            </div>
+          </div>
+          <a href="detail.html" class="product-info">
+            <div class="product-name">Respira</div>
+            <div class="product-sub">야외 바 테이블과 의자</div>
+            <div class="product-price">
+              <span class="price-main">￦500,000</span>
+            </div>
+          </a>
+          <span class="badge badge-new" aria-label="신상품">New</span>
+        </li>
+
+        <!-- 5 -->
+        <li class="product-card" role="listitem">
+          <div class="product-thumb">
+            <div class="product-thumb-img" style="background-image:url('img/product_05.jpg');" aria-hidden="true"></div>
+            <div class="product-overlay" aria-hidden="true">
+              <button class="btn-add">Add to cart</button>
+              <div class="overlay-actions">
+                <span class="overlay-action">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
+                    <polyline points="16 6 12 2 8 6" />
+                    <line x1="12" y1="2" x2="12" y2="15" />
+                  </svg>
+                  Share
+                </span>
+                <span class="overlay-action">
+                  <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9" /></svg>
+                  Compare
+                </span>
+                <span class="overlay-action">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l7.78 7.78 7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                    />
+                  </svg>
+                  Like
+                </span>
+              </div>
+            </div>
+          </div>
+          <a href="detail.html" class="product-info">
+            <div class="product-name">Grifo</div>
+            <div class="product-sub">야간 조명</div>
+            <div class="product-price">
+              <span class="price-main">￦150,000</span>
+            </div>
+          </a>
+        </li>
+
+        <!-- 6 -->
+        <li class="product-card" role="listitem">
+          <div class="product-thumb">
+            <div class="product-thumb-img" style="background-image:url('img/product_06.jpg');" aria-hidden="true"></div>
+            <div class="product-overlay" aria-hidden="true">
+              <button class="btn-add">Add to cart</button>
+              <div class="overlay-actions">
+                <span class="overlay-action">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
+                    <polyline points="16 6 12 2 8 6" />
+                    <line x1="12" y1="2" x2="12" y2="15" />
+                  </svg>
+                  Share
+                </span>
+                <span class="overlay-action">
+                  <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9" /></svg>
+                  Compare
+                </span>
+                <span class="overlay-action">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l7.78 7.78 7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                    />
+                  </svg>
+                  Like
+                </span>
+              </div>
+            </div>
+          </div>
+          <a href="detail.html" class="product-info">
+            <div class="product-name">Muggo</div>
+            <div class="product-sub">작은 머그컵</div>
+            <div class="product-price">
+              <span class="price-main">￦150,000</span>
+            </div>
+          </a>
+          <span class="badge badge-new" aria-label="신상품">New</span>
+        </li>
+
+        <!-- 7 -->
+        <li class="product-card" role="listitem">
+          <div class="product-thumb">
+            <div class="product-thumb-img" style="background-image:url('img/product_07.jpg');" aria-hidden="true"></div>
+            <div class="product-overlay" aria-hidden="true">
+              <button class="btn-add">Add to cart</button>
+              <div class="overlay-actions">
+                <span class="overlay-action">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
+                    <polyline points="16 6 12 2 8 6" />
+                    <line x1="12" y1="2" x2="12" y2="15" />
+                  </svg>
+                  Share
+                </span>
+                <span class="overlay-action">
+                  <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9" /></svg>
+                  Compare
+                </span>
+                <span class="overlay-action">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l7.78 7.78 7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                    />
+                  </svg>
+                  Like
+                </span>
+              </div>
+            </div>
+          </div>
+          <a href="detail.html" class="product-info">
+            <div class="product-name">Pingky</div>
+            <div class="product-sub">귀여운 침구 세트</div>
+            <div class="product-price">
+              <span class="price-main">￦70,000</span>
+              <span class="price-orig">￦1400,000</span>
+            </div>
+          </a>
+          <span class="badge badge-sale" aria-label="50% 할인">-50%</span>
+        </li>
+
+        <!-- 8 -->
+        <li class="product-card" role="listitem">
+          <div class="product-thumb">
+            <div class="product-thumb-img" style="background-image:url('img/product_08.jpg');" aria-hidden="true"></div>
+            <div class="product-overlay" aria-hidden="true">
+              <button class="btn-add">Add to cart</button>
+              <div class="overlay-actions">
+                <span class="overlay-action">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
+                    <polyline points="16 6 12 2 8 6" />
+                    <line x1="12" y1="2" x2="12" y2="15" />
+                  </svg>
+                  Share
+                </span>
+                <span class="overlay-action">
+                  <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9" /></svg>
+                  Compare
+                </span>
+                <span class="overlay-action">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l7.78 7.78 7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                    />
+                  </svg>
+                  Like
+                </span>
+              </div>
+            </div>
+          </div>
+          <a href="detail.html" class="product-info">
+            <div class="product-name">Potty</div>
+            <div class="product-sub">미니멀리스트 화분</div>
+            <div class="product-price">
+              <span class="price-main">￦500,000</span>
+            </div>
+          </a>
+          <span class="badge badge-new" aria-label="신상품">New</span>
+        </li>
+      </ul>
+
+      <div class="show-more-wrap reveal">
+        <a href="#" class="btn-outline-gold">Show More</a>
+      </div>
+    </section>
+
+    <!-- INSPIRATION -->
+    <section class="inspiration reveal" aria-labelledby="inspo-heading">
+      <div class="inspo-left">
+        <div class="inspo-content">
+          <h2 id="inspo-heading" class="inspo-title">50+ Beautiful rooms<br />inspiration</h2>
+          <p class="inspo-desc">FurniHome은 여러분에게 영감을 줄 수 있는 아름다운 객실 프로토타입을 많이 제작했습니다.</p>
+          <a href="#" class="btn-gold-sm">더 알아보기</a>
+        </div>
+      </div>
+      <div class="inspo-right" aria-label="룸 인스피레이션 이미지">
+        <div class="inspo-img-main" aria-hidden="true"></div>
+        <div class="inspo-img-thumb" aria-hidden="true"></div>
+        <div class="inspo-img-thumb" aria-hidden="true"></div>
+        <div class="inspo-caption">
+          <span class="inspo-cap-num">01 ——</span>
+          <div>
+            <div style="font-size:0.65rem;color:var(--text3);">Bed Room</div>
+            <div class="inspo-cap-title">Inner Peace</div>
+          </div>
+          <div class="inspo-cap-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6" /></svg>
+          </div>
+        </div>
+        <div class="inspo-dots" aria-hidden="true">
+          <div class="dot active"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HASHTAG -->
+    <section class="hashtag-section reveal" aria-labelledby="hashtag-heading">
+      <p class="hashtag-kicker">FurniHome 인스타그램을 팔로우하고, #FurniHome 을 태그하거나 이미지를 업로드 해주세요.</p>
+      <h2 id="hashtag-heading" class="hashtag-title">#FurniHome</h2>
+      <div class="hashtag-grid" aria-label="해시태그 갤러리" role="list">
+        <div class="hg-item hg-tall" role="listitem" aria-label="갤러리 이미지">
+          <div class="hg-inner c5"></div>
+        </div>
+        <div role="listitem" aria-label="갤러리 이미지">
+          <div class="hg-inner c1"></div>
+        </div>
+        <div class="hg-item hg-tall" role="listitem" aria-label="갤러리 이미지">
+          <div class="hg-inner c2"></div>
+        </div>
+        <div role="listitem" aria-label="갤러리 이미지">
+          <div class="hg-inner c3"></div>
+        </div>
+        <div role="listitem" aria-label="갤러리 이미지">
+          <div class="hg-inner c4"></div>
+        </div>
+        <div role="listitem" aria-label="갤러리 이미지">
+          <div class="hg-inner c6"></div>
+        </div>
+        <div role="listitem" aria-label="갤러리 이미지">
+          <div class="hg-inner c7"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer aria-label="사이트 정보">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">FuniHome.<span>TM</span></div>
+          <address class="footer-addr" style="font-style:normal;">
+            서울특별시 강남구 테헤란로 123<br />
+            1층 123호<br />
+            Seoul, KOREA
+          </address>
+        </div>
+        <div>
+          <div class="footer-col-title">Links</div>
+          <nav class="footer-links" aria-label="사이트 링크">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+          </nav>
+        </div>
+        <div>
+          <div class="footer-col-title">Help</div>
+          <nav class="footer-links" aria-label="도움말 링크">
+            <a href="#">Payment Options</a>
+            <a href="#">Returns</a>
+            <a href="#">Privacy Policies</a>
+          </nav>
+        </div>
+        <div>
+          <div class="footer-col-title">Newsletter</div>
+          <form class="newsletter-form" aria-label="뉴스레터 구독">
+            <label for="newsletter-email" class="sr-only">이메일 주소</label>
+            <input id="newsletter-email" type="email" placeholder="Enter Your Email Address" />
+            <button type="submit">SUBSCRIBE</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2024 FurniHome. All rights reserved.</span>
+      </div>
+    </footer>
+
+    <script>
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e, i) => {
+          if (e.isIntersecting) {
+            setTimeout(() => e.target.classList.add('visible'), i * 60);
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.07 });
+      document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    </script>
+  </body>
+</html>

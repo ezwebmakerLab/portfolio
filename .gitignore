@@ -1,0 +1,13 @@
+# sass 폴더 전체 제외
+portfolio/furnihome/sass/
+portfolio/bascketball/sass/
+portfolio/flowmatrics/sass/
+portfolio/simplecafe/sass/
+portfolio/cafevillage/sass/
+
+portfolio/furnihome/css/style.css
+portfolio/bascketball/css/style.css
+portfolio/flowmatrics/css/style.css
+portfolio/simplecafe/css/style.css
+portfolio/cafevillage/css/style.css
+
