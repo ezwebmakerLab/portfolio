@@ -261,6 +261,21 @@
         transition: color 0.2s;
       }
 
+      .work-name a,
+      .work-name a:visited {
+        font-family: var(--display);
+        font-size: clamp(1.6rem, 3vw, 2.2rem);
+        color: inherit;
+        letter-spacing: 0.04em;
+        line-height: 1;
+        text-decoration: none;
+      }
+
+      .work-name a:hover {
+        text-decoration: none;
+        color: var(--orange);
+      }
+
       .work-desc {
         font-size: 0.9rem;
         color: var(--fg2);
@@ -551,7 +566,7 @@
         <div class="work-num" aria-hidden="true">01</div>
         <div class="work-body">
           <div class="work-type" aria-hidden="true">E-commerce · 가구 쇼핑몰 · 멀티페이지</div>
-          <p class="work-name">FurniHome</p>
+          <p class="work-name"><a href="portfolio/furnihome/" aria-label="Basketball 쇼핑몰 랜딩페이지 보기">FurniHome</a></p>
           <p class="work-desc">
             가구 쇼핑몰 디자인 시안을 HTML/CSS로 구현한 3페이지 작업물. <br />
             메인 랜딩, 상품 목록, 상품 상세 페이지로 구성되며 페이지 간 링크가 연결되어 있음. <br />
@@ -616,7 +631,9 @@
         <div class="work-num" aria-hidden="true">02</div>
         <div class="work-body">
           <div class="work-type" aria-hidden="true">E-commerce · 쇼핑몰 랜딩</div>
-          <p class="work-name">BASKETBALL</p>
+          <p class="work-name">
+            <a href="portfolio/bascketball/index.html" aria-label="Basketball ARIA 접근성 적용 버전 별도 보기">BASKETBALL</a>
+          </p>
           <p class="work-desc">
             농구용품 쇼핑몰 랜딩페이지. 히어로 배너, 카테고리 그리드, 상품 카드, 배너 섹션으로 구성.<br />
             <code>picture</code> 태그로 모바일·데스크탑 이미지를 분기하고, IntersectionObserver 기반 스크롤 페이드인 적용.
@@ -628,12 +645,12 @@
             <span class="skill-tag">scroll fade-in</span>
             <span class="skill-tag hl">ARIA 전/후 비교</span>
           </div>
-          <a class="work-sub" href="portfolio/bascketball/index.html" aria-label="Basketball ARIA 접근성 적용 버전 별도 보기">
+          <a class="work-sub" href="portfolio/bascketball/index_aria.html" aria-label="Basketball ARIA 접근성 적용 버전 별도 보기">
             ARIA 접근성 적용 버전 →
           </a>
         </div>
         <p class="work-thumb">
-          <a href="portfolio/bascketball/index_aria.html" aria-label="Basketball ARIA 접근성 적용 버전 별도 보기"
+          <a href="portfolio/bascketball/index.html" aria-label="Basketball ARIA 접근성 적용 버전 별도 보기"
             ><img src="img/02.png" alt="BASKET BALL"
           /></a>
         </p>
@@ -645,7 +662,7 @@
         <div class="work-num" aria-hidden="true">03</div>
         <div class="work-body">
           <div class="work-type" aria-hidden="true">SaaS · 영문 랜딩페이지</div>
-          <p class="work-name">FLOWMETRICS</p>
+          <p class="work-name"><a href="portfolio/flowmatrics/" aria-label="FlowMetrics SaaS 랜딩페이지 보기">FLOWMETRICS</a></p>
           <p class="work-desc">
             분석 대시보드 SaaS 서비스의 영문 랜딩페이지. 기능 소개, 프리뷰 섹션, 혜택 정리, CTA까지 전형적인 SaaS 랜딩 구조를 구현. IT
             스타트업·에이전시 클라이언트 대응 레퍼런스.
@@ -668,8 +685,8 @@
         <div class="work-num" aria-hidden="true">04</div>
         <div class="work-body">
           <div class="work-type" aria-hidden="true">F&amp;B · 프랜차이즈 랜딩</div>
-          <p class="work-name">SIMPLE CAFE</p>
-          <p class="work-desc">
+          <p class="work-name"><a href="portfolio/simplecafe/" aria-label="Simple Cafe 프랜차이즈 랜딩페이지 보기">SIMPLE CAFE</a></p>
+          <p class="work-desc"></a>
             커피 프랜차이즈 가맹 안내 랜딩페이지. 메뉴 소개, 창업 혜택, 매장 현황, 문의 폼까지 소상공인 타깃 랜딩에 필요한 요소를 완결 구성. select
             포함 폼 마크업 구현.
           </p>
