@@ -54,6 +54,8 @@
       }
 
       .logo {
+        position: relative;
+        padding-right: 140px;
         font-family: var(--display);
         font-size: clamp(1.8rem, 4vw, 2.6rem);
         letter-spacing: 0.06em;
@@ -63,14 +65,42 @@
 
       .logo span { color: var(--orange2); }
 
+      .logo sup {
+        position: absolute;
+        top: -13px;
+        right: 0;
+        font-size: clamp(1.6rem, 3vw, 2.4rem);
+        color: greenyellow;
+      }
+
       .header-meta {
         text-align: right;
         font-size: 0.78rem;
         font-family: var(--mono);
         color: var(--fg3);
         line-height: 1.9;
-        letter-spacing: 0.04em;
+        letter-spacing: 0.02em;
       }
+
+      .header-meta i,
+      .footer-note i {
+        font-size: 20px;
+        margin: 5px 10px;
+      }
+
+      .header-meta img,
+      .footer-note img {
+        width: 20px;
+        height: 20px;
+        filter: invert(100%) brightness(200%);
+      }
+
+      /* 기술별 브랜드 컬러 */
+      .fa-html5 { color: #E34F26; }
+      .fa-css3-alt { color: #1572B6; }
+      .fa-js { color: #F7DF1E; background: #000; } /* JS는 보통 검정 배경에 노란색 */
+      .fa-react { color: #61DAFB; }
+      .fa-sass { color: #CC6699;}
 
       /* INTRO */
       .intro {
@@ -294,15 +324,24 @@
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        gap: 4px;
+        gap: 8px;
         overflow: hidden;
       }
 
       .work-thumb img {
-        max-width: 15rem;
+        border-radius: 8px;
+        max-width: 14rem;
         min-width: 6rem;
         max-height: 100%;
         object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .work-thumb a {
+      }
+
+      .work-thumb a:hover img {
+        transform: scale(.9) rotate(-7deg);
       }
 
       .work-arrow {
@@ -332,10 +371,26 @@
       .work-sub:hover { border-color: var(--orange2); }
 
       .cta {
+        display: flex;
+        justify-content: center;
         padding: 100px 20px;
         text-align: center;
         background: #111;
         color: #fff;
+        gap: 3rem;
+      }
+
+      .cta .cta-left {
+        flex: 1;
+      }
+
+      .cta .cta-right {
+        flex: 1;
+        text-align: left;
+      }
+
+      .cta .cta-right li {
+        padding: 4px 0;
       }
 
       .btn {
@@ -356,17 +411,43 @@
         position: fixed;
         right: 20px;
         top: 200px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .floating-cta span {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(8px);
+        color: #fff;
+        padding: 10px 18px;
+        border-radius: 12px;
+        font-size: 15px;
+        font-weight: 500;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+      }
+
+      .floating-cta .btn {
+        display: block;
         background: #333;
         color: #fff;
         padding: 12px 16px;
         background: var(--orange);
         border-radius: 30px;
         text-decoration: none;
+        margin-top: 0;
+        box-shadow: 0 4px 15px rgba(255, 140, 0, 0.4);
+        transition: transform 0.2s ease;
       }
 
-      .floating-cta:hover {
+      .floating-cta > .btn:hover {
         background: var(--orange2);
       }
+
+      .floating-cta .btn:hover {
+          transform: translateY(-3px);
+        }
 
       /* FOOTER */
       footer {
@@ -384,10 +465,19 @@
         letter-spacing: 0.05em;
       }
 
+      .footer-note-r {
+        font-family: var(--mono);
+        font-size: 0.74rem;
+        color: var(--fg3);
+        letter-spacing: 0.05em;
+
+      }
+
       /* RESPONSIVE */
       @media (max-width: 720px) {
         header { padding: 1.8rem 1.5rem; flex-direction: column; align-items: flex-start; gap: 0.8rem; }
         .header-meta { text-align: left; }
+        .logo { padding-right: 100px; }
         .intro { padding: 3rem 1.5rem 2.5rem; grid-template-columns: 1fr; gap: 2rem; }
         .works-section { padding: 0 1.5rem 4rem; }
         .work-item { grid-template-columns: 44px 1fr 1.2rem; gap: 0 1rem; padding: 1.8rem 0; }
@@ -408,10 +498,16 @@
   </head>
   <body>
     <header class="reveal">
-      <div class="logo" aria-label="Web Publisher 포트폴리오">WEB <span>PUBLISHER</span></div>
+      <div class="logo" aria-label="Web Publisher 포트폴리오">WEB <span>PUBLISHER</span><sup>15yr exp.</sup></div>
       <div class="header-meta" aria-hidden="true">
-        HTML / CSS / SASS · 반응형 · 웹접근성 · 시맨틱 마크업<br />
-        랜딩페이지 · UI 리뉴얼 · 코드 리팩토링 · Figma to Code · 15yr exp.
+        <i class="fa-brands fa-html5" title="HTML5"></i>
+        <i class="fa-brands fa-css3-alt" title="CSS3"></i>
+        <i class="fa-brands fa-sass" title="Sass"></i>
+        <i class="fa-brands fa-js" title="JavaScript"></i>
+        <i class="fa-brands fa-react" title="React"></i>
+        <i><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/tailwindcss.svg" title="tailwind css" /></i>
+        <i><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/vite.svg" title="vite" /></i>
+        <br />반응형 · 웹접근성 · 시맨틱 마크업 · 랜딩페이지 · UI 리뉴얼 · 코드 리팩토링 · Figma to Code
       </div>
     </header>
 
@@ -427,18 +523,13 @@
           답답하게 느껴지거나, 유지보수가 어려운 구조라면 실제 사용 기준으로 다시 설계해드립니다. <br />
           디자인 시안이 실제 브라우저에서 깨지지 않도록, 모바일부터 데스크탑까지 일관되게 구현합니다.<br /><br />
 
-          이런 분께 추천!<br />
-          ✔ 기존 웹사이트가 오래되어 개선이 필요한 경우<br />
-          ✔ 디자인은 있는데 구현이 아쉬운 경우<br />
-          ✔ 유지보수가 어려운 코드 구조인 경우<br />
-          ✔ 퍼블리싱 퀄리티를 높이고 싶은 경우<br /><br />
-
-          15년 경력의 마크업 개발 경험을 기반으로 실무 중심의 안정적인 결과를 제공합니다.<br />
+          15년 이상의 마크업 경험을 바탕으로 실무 중심의 안정적인 결과를 제공합니다.<br />
           랜딩페이지 퍼블리싱 / 기존 사이트 리뉴얼 / 반응형 대응 / 코드 리팩토링 / Figma 협업
         </p>
         <ul class="intro-tags" role="list" aria-label="보유 기술">
           <li class="tag">HTML5</li>
           <li class="tag">CSS3</li>
+          <li class="tag">Sass</li>
           <li class="tag">반응형 웹</li>
           <li class="tag">웹접근성 WCAG</li>
           <li class="tag">ARIA</li>
@@ -464,17 +555,10 @@
           <p class="work-desc">
             가구 쇼핑몰 디자인 시안을 HTML/CSS로 구현한 3페이지 작업물. <br />
             메인 랜딩, 상품 목록, 상품 상세 페이지로 구성되며 페이지 간 링크가 연결되어 있음. <br />
-            👉🏻 메인 - 히어로 배너, 카테고리 그리드, 상품 카드, 룸 인스피레이션 배너, 해시태그 갤러리 섹션으로 구성.<br />
+            <!-- 👉🏻 메인 - 히어로 배너, 카테고리 그리드, 상품 카드, 룸 인스피레이션 배너, 해시태그 갤러리 섹션으로 구성.<br />
             👉🏻 상품 목록 - Filter · Show · Sort by 필터바와 4열 16개 상품 그리드, 페이지네이션을 구현<br />
-            👉🏻 상품 상세 - 썸네일 클릭 전환, 사이즈·컬러 선택, 수량 조절, 탭 전환 등 인터랙션을 JavaScript로 처리
+            👉🏻 상품 상세 - 썸네일 클릭 전환, 사이즈·컬러 선택, 수량 조절, 탭 전환 등 인터랙션을 JavaScript로 처리 -->
           </p>
-          <!-- <div class="inner">
-            <ul>
-              <li>메인 - 히어로 배너, 카테고리 그리드, 상품 카드, 룸 인스피레이션 배너, 해시태그 갤러리 섹션으로 구성.</li>
-              <li>상품 목록 - Filter · Show · Sort by 필터바와 4열 16개 상품 그리드, 페이지네이션을 구현</li>
-              <li>상품 상세 - 썸네일 클릭 전환, 사이즈·컬러 선택, 수량 조절, 탭 전환 등 인터랙션을 JavaScript로 처리</li>
-            </ul>
-          </div> -->
           <section>
             <div class="inner">
               <h2>작업 내용</h2>
@@ -544,7 +628,7 @@
             <span class="skill-tag">scroll fade-in</span>
             <span class="skill-tag hl">ARIA 전/후 비교</span>
           </div>
-          <a class="work-sub" href="portfolio/bascketball/index_aria.html" aria-label="Basketball ARIA 접근성 적용 버전 별도 보기">
+          <a class="work-sub" href="portfolio/bascketball/index.html" aria-label="Basketball ARIA 접근성 적용 버전 별도 보기">
             ARIA 접근성 적용 버전 →
           </a>
         </div>
@@ -605,7 +689,7 @@
 
     <!-- CTA -->
     <section class="cta">
-      <div class="inner">
+      <div class="cta-left">
         <h2>프로젝트 문의</h2>
         <p>
           간단한 UI 수정부터 전체 리뉴얼까지<br />
@@ -614,12 +698,33 @@
         </p>
         <a href="mailto:ezlab2026@gmail.com" class="btn primary"> 문의하기 </a>
       </div>
+      <div class="cta-right">
+        <h2>이런 분께 추천!</h2>
+        <ul>
+          <li>✔ 기존 웹사이트가 오래되어 개선이 필요한 경우</li>
+          <li>✔ 디자인은 있는데 구현이 아쉬운 경우</li>
+          <li>✔ 유지보수가 어려운 코드 구조인 경우</li>
+          <li>✔ 퍼블리싱 퀄리티를 높이고 싶은 경우</li>
+        </ul>
+      </div>
     </section>
 
-    <a href="mailto:ezlab2026@gmail.com" class="floating-cta"> 문의하기 </a>
+    <div class="floating-cta">
+      <span>이런 구조 개선이 필요하신가요?</span>
+      <a href="mailto:ezlab2026@gmail.com" class="btn"> 문의하기 </a>
+    </div>
 
     <footer aria-label="연락처 정보">
-      <span class="footer-note">HTML / CSS / SASS · 반응형 · 웹접근성 · 시맨틱 마크업 · 랜딩페이지 · UI 리뉴얼 · 코드 리팩토링 · Figma to Code</span>
+      <span class="footer-note">
+        <i class="fa-brands fa-html5" title="HTML5"></i>
+        <i class="fa-brands fa-css3-alt" title="CSS3"></i>
+        <i class="fa-brands fa-sass" title="Sass"></i>
+        <i class="fa-brands fa-js" title="JavaScript"></i>
+        <i class="fa-brands fa-react" title="React"></i>
+        <i><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/tailwindcss.svg" title="tailwind css" /></i>
+        <i><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/vite.svg" title="vite" /></i>
+      </span>
+      <span class="footer-note-r">반응형 · 웹접근성 · 시맨틱 마크업 · 랜딩페이지 · UI 리뉴얼 · 코드 리팩토링 · Figma to Code</span>
     </footer>
 
     <script>
